@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://dc1xd170yfvm8"]
+
+[ext_resource type="Script" uid="uid://wj4va0gwvwhh" path="res://addons/jam_template/ui/settings_screen.gd" id="1_vmn6j"]
+[ext_resource type="Script" uid="uid://dbei3rwu18mb3" path="res://addons/jam_template/ui/widgets/volume_slider.gd" id="2_tjr4d"]
+[ext_resource type="Script" uid="uid://ckrlgou2x4ade" path="res://addons/jam_template/ui/widgets/volume_percent_label.gd" id="3_vmn6j"]
+
+[node name="SettingsScreen" type="Control" unique_id=1684574658]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vmn6j")
+metadata/_custom_type_script = "uid://c4e42g1ad8bs8"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1038474466]
+layer = 100
+
+[node name="Mask" type="ColorRect" parent="CanvasLayer" unique_id=768988051]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Mask" unique_id=1495655872]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = -81.5
+offset_right = 128.5
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Mask/PanelContainer" unique_id=892808325]
+layout_mode = 2
+
+[node name="TopDecoration" type="Panel" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer" unique_id=870282989]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer" unique_id=777095725]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Settings"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer" unique_id=472564419]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer" unique_id=124260532]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1788722610]
+layout_mode = 2
+
+[node name="LabelVBoxContainer" type="VBoxContainer" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1693255262]
+layout_mode = 2
+
+[node name="MasterLabel" type="Label" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/LabelVBoxContainer" unique_id=1224735476]
+layout_mode = 2
+text = "Master"
+
+[node name="SFXLabel" type="Label" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/LabelVBoxContainer" unique_id=696684030]
+layout_mode = 2
+text = "SFX"
+
+[node name="MusicLabel" type="Label" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/LabelVBoxContainer" unique_id=708235661]
+layout_mode = 2
+text = "Music"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1209649554]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="SliderVBoxContainer" type="VBoxContainer" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=549405793]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="MasterVolumeSlider" type="HSlider" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/SliderVBoxContainer" unique_id=79872175]
+layout_mode = 2
+script = ExtResource("2_tjr4d")
+bus = "Master"
+metadata/_custom_type_script = "uid://dbei3rwu18mb3"
+
+[node name="SFXVolumeSlider" type="HSlider" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/SliderVBoxContainer" unique_id=1460306208]
+layout_mode = 2
+script = ExtResource("2_tjr4d")
+bus = "SFX"
+metadata/_custom_type_script = "uid://dbei3rwu18mb3"
+
+[node name="MusicVolumeSlider" type="HSlider" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/SliderVBoxContainer" unique_id=682870705]
+layout_mode = 2
+script = ExtResource("2_tjr4d")
+bus = "Music"
+metadata/_custom_type_script = "uid://dbei3rwu18mb3"
+
+[node name="SuffixVBoxContainer" type="VBoxContainer" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1223117410]
+layout_mode = 2
+
+[node name="MasterLabel" type="Label" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/SuffixVBoxContainer" unique_id=1072145154]
+layout_mode = 2
+text = "100"
+script = ExtResource("3_vmn6j")
+bus = "Master"
+
+[node name="SFXLabel" type="Label" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/SuffixVBoxContainer" unique_id=957610802]
+layout_mode = 2
+text = "100"
+script = ExtResource("3_vmn6j")
+bus = "SFX"
+
+[node name="MusicLabel" type="Label" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/SuffixVBoxContainer" unique_id=2130258495]
+layout_mode = 2
+text = "100"
+script = ExtResource("3_vmn6j")
+bus = "Music"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1444976326]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 32
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1345169481]
+layout_mode = 2
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1755377142]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit"
+
+[node name="BottomDecoration" type="Panel" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer" unique_id=347565231]
+layout_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]

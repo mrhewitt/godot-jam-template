@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dv8lpcueasdlq"]
+
+[ext_resource type="Script" uid="uid://mptvuywwably" path="res://addons/jam_template/ui/buttons/settings_button.gd" id="1_015we"]
+[ext_resource type="Texture2D" uid="uid://fgay0mr0dnou" path="res://addons/jam_template/assets/settings-button-icon.png" id="1_es6u8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oc8uo"]
+texture = ExtResource("1_es6u8")
+
+[node name="SettingsButton" type="Button" unique_id=377646438]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_oc8uo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oc8uo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oc8uo")
+script = ExtResource("1_015we")
+metadata/_custom_type_script = "uid://wlc0oh0oxvf4"

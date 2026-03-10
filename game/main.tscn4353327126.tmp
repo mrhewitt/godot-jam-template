@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bium6i6imetdq"]
+
+[ext_resource type="Script" uid="uid://bocryk0y4yxm7" path="res://addons/jam_template/game/main_template.gd" id="1_230t5"]
+[ext_resource type="Script" uid="uid://dj8vur1twdeoc" path="res://addons/jam_template/game/game-state/game_state_machine.gd.gd" id="2_rppcx"]
+[ext_resource type="Script" uid="uid://cv3fdd1kuyduj" path="res://addons/jam_template/game/game-state/game_state_splash_screens.gd" id="3_eadv1"]
+[ext_resource type="Script" uid="uid://b4y45h1uj77qq" path="res://addons/jam_template/components/splash_screen.gd" id="4_c2wxi"]
+[ext_resource type="Texture2D" uid="uid://b3d85615o54xe" path="res://assets/36359.jpg" id="5_kwowk"]
+
+[node name="Main" type="Node" unique_id=1475655519]
+script = ExtResource("1_230t5")
+metadata/_custom_type_script = "uid://bocryk0y4yxm7"
+
+[node name="GameStateMachine" type="Node" parent="." unique_id=1392426621]
+script = ExtResource("2_rppcx")
+metadata/_custom_type_script = "uid://dj8vur1twdeoc"
+
+[node name="GameStateSplashScreens" type="Node" parent="GameStateMachine" unique_id=1063501137]
+script = ExtResource("3_eadv1")
+metadata/_custom_type_script = "uid://cv3fdd1kuyduj"
+
+[node name="TitleScreen" type="Control" parent="GameStateMachine/GameStateSplashScreens" unique_id=923559744]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_c2wxi")
+metadata/_custom_type_script = "uid://b4y45h1uj77qq"
+
+[node name="TextureRect" type="TextureRect" parent="GameStateMachine/GameStateSplashScreens/TitleScreen" unique_id=982316011]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_kwowk")

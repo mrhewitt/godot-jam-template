@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://y5vb2uu28i3p"]
+
+[ext_resource type="Script" uid="uid://bocryk0y4yxm7" path="res://addons/jam_template/game/main_template.gd" id="1_466ws"]
+
+[node name="MainTemplate" type="Node" unique_id=1317868146]
+script = ExtResource("1_466ws")
+metadata/_custom_type_script = "uid://bocryk0y4yxm7"

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bbpcfebamlxy5"]
+
+[ext_resource type="Script" uid="uid://cb45hd0st3pf4" path="res://addons/jam_template/game/game_base.gd" id="1_f0tlx"]
+
+[node name="GameBase" type="Node" unique_id=1939521314]
+script = ExtResource("1_f0tlx")

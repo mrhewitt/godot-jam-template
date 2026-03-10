@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bxtivk0u12flw"]
+
+[ext_resource type="PackedScene" uid="uid://dc1xd170yfvm8" path="res://addons/jam_template/ui/settings_screen.tscn" id="1_agkjf"]
+
+[node name="SettingsOverlay" type="ColorRect" unique_id=1156343498]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.18039216)
+
+[node name="SettingsScreen" parent="." unique_id=1684574658 instance=ExtResource("1_agkjf")]
+layout_mode = 1

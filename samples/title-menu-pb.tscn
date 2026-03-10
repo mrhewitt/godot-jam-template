@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://bium6i6imetdq"]
+
+[ext_resource type="Script" uid="uid://bocryk0y4yxm7" path="res://addons/jam_template/game/main_template.gd" id="1_odk0x"]
+[ext_resource type="Script" uid="uid://dj8vur1twdeoc" path="res://addons/jam_template/game/game-state/game_state_machine.gd" id="2_i4gx3"]
+[ext_resource type="Script" uid="uid://cv3fdd1kuyduj" path="res://addons/jam_template/game/game-state/game_state_splash_screens.gd" id="3_v3eqe"]
+[ext_resource type="Script" uid="uid://b4y45h1uj77qq" path="res://addons/jam_template/components/splash_screen.gd" id="4_4d53k"]
+[ext_resource type="Texture2D" uid="uid://ddgngx48l68o" path="res://addons/jam_template/assets/logo-splash.png" id="5_gtnfg"]
+[ext_resource type="Script" uid="uid://cb7rba50kla14" path="res://addons/jam_template/game/game-state/game_state_menu.gd" id="6_f0wlf"]
+[ext_resource type="Script" uid="uid://c2inws6cdbcxx" path="res://addons/jam_template/ui/buttons/play_button.gd" id="7_1yxq5"]
+[ext_resource type="Script" uid="uid://xx22qyuapr8q" path="res://addons/jam_template/ui/buttons/quit_button.gd" id="8_cfle5"]
+[ext_resource type="Script" uid="uid://d1gl57aphnkkk" path="res://addons/jam_template/ui/buttons/options_button.gd" id="8_i4gx3"]
+[ext_resource type="Script" uid="uid://dge31ko47i0vl" path="res://addons/jam_template/game/game-state/game_state_play.gd" id="10_sk71d"]
+[ext_resource type="PackedScene" uid="uid://bbfklccvpg24y" path="res://game_world.tscn" id="11_euneg"]
+
+[node name="Main" type="Node" unique_id=1475655519]
+script = ExtResource("1_odk0x")
+metadata/_custom_type_script = "uid://bocryk0y4yxm7"
+
+[node name="GameStateMachine" type="Node" parent="." unique_id=1392426621]
+script = ExtResource("2_i4gx3")
+metadata/_custom_type_script = "uid://dj8vur1twdeoc"
+
+[node name="GameStateSplashScreens" type="Node" parent="GameStateMachine" unique_id=1063501137]
+script = ExtResource("3_v3eqe")
+metadata/_custom_type_script = "uid://cv3fdd1kuyduj"
+
+[node name="LogoSplashScreen" type="Control" parent="GameStateMachine/GameStateSplashScreens" unique_id=923559744]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_4d53k")
+display_time = 222.0
+metadata/_custom_type_script = "uid://b4y45h1uj77qq"
+
+[node name="TextureRect" type="TextureRect" parent="GameStateMachine/GameStateSplashScreens/LogoSplashScreen" unique_id=982316011]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_gtnfg")
+expand_mode = 1
+
+[node name="TitleScreen" type="Control" parent="GameStateMachine/GameStateSplashScreens" unique_id=1038085581]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_4d53k")
+display_time = 3.0
+metadata/_custom_type_script = "uid://b4y45h1uj77qq"
+
+[node name="TextureRect" type="TextureRect" parent="GameStateMachine/GameStateSplashScreens/TitleScreen" unique_id=1741999101]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameStateMenu" type="Node" parent="GameStateMachine" unique_id=641836267]
+script = ExtResource("6_f0wlf")
+metadata/_custom_type_script = "uid://cb7rba50kla14"
+
+[node name="TextureRect" type="TextureRect" parent="GameStateMachine/GameStateMenu" unique_id=843711932]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="MenuVBoxContainer" type="VBoxContainer" parent="GameStateMachine/GameStateMenu" unique_id=574117606]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="GameStateMachine/GameStateMenu/MenuVBoxContainer" unique_id=145714395 node_paths=PackedStringArray("play_state")]
+custom_minimum_size = Vector2(128, 48)
+layout_mode = 2
+text = "PLAY"
+script = ExtResource("7_1yxq5")
+play_state = NodePath("../../../GameStatePlay")
+
+[node name="OptionsButton" type="Button" parent="GameStateMachine/GameStateMenu/MenuVBoxContainer" unique_id=1316257115]
+custom_minimum_size = Vector2(128, 48)
+layout_mode = 2
+text = "SETTINGS"
+script = ExtResource("8_i4gx3")
+
+[node name="QuitButton" type="Button" parent="GameStateMachine/GameStateMenu/MenuVBoxContainer" unique_id=218339456]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "QUIT"
+script = ExtResource("8_cfle5")
+
+[node name="GameStatePlay" type="Node" parent="GameStateMachine" unique_id=753930524 node_paths=PackedStringArray("return_state")]
+script = ExtResource("10_sk71d")
+return_state = NodePath("../GameStateMenu")
+game_scene = ExtResource("11_euneg")
+metadata/_custom_type_script = "uid://dge31ko47i0vl"

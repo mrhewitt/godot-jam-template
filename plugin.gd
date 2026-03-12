@@ -1,5 +1,5 @@
 @tool
-extends EditorPlugin
+class_name GodotJamTemplatePlugin extends EditorPlugin
 
 ## Autoload that handles saving screens of gameplay  
 const SCREEN_SHOT = "ScreenShot"
@@ -9,6 +9,14 @@ const GAME_MANAGER = "Game"
 
 ## Path the the default audio bus to configure for the project
 const AUDIO_BUS_PATH = "res://addons/jam_template/resources/default_bus_layout.tres"
+
+## Audio resource providing default click sound for buttons
+## [br] DO NOT USE THIS DIRECTLY
+## [br] Get default sound resource path from proejct settings using SETTINGS_UI_CLOCK_SOUND const
+const DEFAULT_UI_CLICK_AUDIO = "res://addons/jam_template/resources/ui_click.tres"
+
+## Path the Project Settings value for getting the path of default audio resource for button clicks
+const SETTINGS_UI_CLOCK_SOUND = "plugin/godot_jam_template/ui_click_sound"
 
 ## Specials actions automatically setup by the template
 const ACTIONS = {
@@ -26,6 +34,10 @@ func _enable_plugin() -> void:
 	add_autoload_singleton(GAME_MANAGER, "res://addons/jam_template/game/game_base.tscn")
 	
 	add_actions( ACTIONS )
+	
+	# these are custom Project Settings value specifically for making template easy to use
+	# so indivual games can override some things like defualt UI sound etc without needing
+	ProjectSettings.set_setting(SETTINGS_UI_CLOCK_SOUND, DEFAULT_UI_CLICK_AUDIO )
 	
 	ProjectSettings.set_setting("audio/buses/default_bus_layout",AUDIO_BUS_PATH)
 	ProjectSettings.save()

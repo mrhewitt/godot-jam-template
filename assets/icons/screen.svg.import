@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rpc23058eofc"
-path="res://.godot/imported/screen.svg-d8cfb3ed9abb6ab6e85c1196d2f774cd.ctex"
+path="res://.godot/imported/screen.svg-17c18c2ef8d4ce10fd6f37ef9de93547.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/jam_template/assets/icons/screen.svg"
-dest_files=["res://.godot/imported/screen.svg-d8cfb3ed9abb6ab6e85c1196d2f774cd.ctex"]
+source_file="res://addons/godot-jam-template/assets/icons/screen.svg"
+dest_files=["res://.godot/imported/screen.svg-17c18c2ef8d4ce10fd6f37ef9de93547.ctex"]
 
 [params]
 

@@ -9,11 +9,12 @@ var game_state_machine: GameStateMachine
 
 
 ## Show/hide the settings overlay and pause/resume game
-func show_settings( show_quit_button: bool = false ) -> void:
+## [br]Set [param game_scene] for a quit button to leave game play state
+func show_settings( game_scene: GameScene = null ) -> void:
 	pause() 
 
 	var instance = SETTINGS_SCREEN.instantiate()
-	instance.show_quit_button = show_quit_button
+	instance.from_game_scene = game_scene
 	get_tree().root.add_child(instance)
 	
 	

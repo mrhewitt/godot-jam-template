@@ -1,4 +1,4 @@
-@icon("res://addons/jam_template/assets/icons/icons8-home-page-50.png")
+@icon("res://addons/godot-jam-template/assets/icons/icons8-home-page-50.png")
 class_name MainTemplate extends Node
 
 ## This is here in case we aren't allowing the player to skip the splash
@@ -13,6 +13,7 @@ func _ready() -> void:
 
 
 func _on_ready() -> void:
+	
 	pass
 	# GameStateMachine starts on Splash Screens by default.
 	# This is here unless we aren't allowing the player to skip the splash

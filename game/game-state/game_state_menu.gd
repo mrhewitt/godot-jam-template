@@ -8,10 +8,12 @@ func _activate_state() -> void:
 		
 
 func _enter_state() -> void:
+	super()
 	for child in get_children():
 		child.visible = true
 		
 		
 func _exit_state() -> void:
+	super()
 	for child in get_children():
 		child.visible = false

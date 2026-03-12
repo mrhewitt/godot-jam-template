@@ -1,4 +1,4 @@
-@icon("res://addons/jam_template/assets/icons/noun-button-ui-4304285.png")
+@icon("res://addons/godot-jam-template/assets/icons/noun-button-ui-4304285.png")
 class_name UIButton extends Button
 ## Specialized button class the automatically produces a UI click sound
 ##

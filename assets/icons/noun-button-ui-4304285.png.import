@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u75xlxwjhnql"
-path="res://.godot/imported/noun-button-ui-4304285.png-b27c31ee61a466d1cc604771f6953972.ctex"
+path="res://.godot/imported/noun-button-ui-4304285.png-017d8944130a193101cd97b98f4207db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/jam_template/assets/icons/noun-button-ui-4304285.png"
-dest_files=["res://.godot/imported/noun-button-ui-4304285.png-b27c31ee61a466d1cc604771f6953972.ctex"]
+source_file="res://addons/godot-jam-template/assets/icons/noun-button-ui-4304285.png"
+dest_files=["res://.godot/imported/noun-button-ui-4304285.png-017d8944130a193101cd97b98f4207db.ctex"]
 
 [params]
 

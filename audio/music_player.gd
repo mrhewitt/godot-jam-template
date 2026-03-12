@@ -39,9 +39,10 @@ func play_all( audio: AudioStreamResource ) -> void:
 
 ## Stops any music currently playing and frees the player instance
 func stop() -> void:
-	if _music_audio_player == null:
+	if _music_audio_player != null:
 		_music_audio_player.stop()
 		_music_audio_player.queue_free()
+		_music_audio_player = null
 
 
 func _play_from_current() -> void:

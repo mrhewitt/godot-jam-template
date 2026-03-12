@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsxts5jrrlvi3"
-path="res://.godot/imported/xfce4-splash-svgrepo-com.svg-76235ad290bcff622c85934ea72c3e24.ctex"
+path="res://.godot/imported/xfce4-splash-svgrepo-com.svg-705c058650197dbce81a9f39f74edca8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/godot-jam-template/assets/icons/xfce4-splash-svgrepo-com.svg"
-dest_files=["res://.godot/imported/xfce4-splash-svgrepo-com.svg-76235ad290bcff622c85934ea72c3e24.ctex"]
+source_file="res://addons/jam_template/assets/icons/xfce4-splash-svgrepo-com.svg"
+dest_files=["res://.godot/imported/xfce4-splash-svgrepo-com.svg-705c058650197dbce81a9f39f74edca8.ctex"]
 
 [params]
 

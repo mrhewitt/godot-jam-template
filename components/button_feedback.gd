@@ -14,12 +14,16 @@ class_name ButtonFeedback extends Node
 ## If set will "pop" the button out on press by the standard pOp tween amount 
 @export var pop_on_click: bool = true
 
-## Set this to apply the effects above to all BaseButtons that are siblings of this node
-##
+## Set this to apply the effects above to all BaseButtons that are siblings of this node[br]
+## [color=GOLD]UIButton instances are not affected[color]
 @export var attach_to_siblings: bool = false
 
+## Set this to apply the effects above to all BaseButtons that are descentdants at any level of this node[br]
+## [color=GOLD]UIButton instances are not affected[color]
 @export var attach_to_children: bool = false
 
+## Set this to apply the effects above to all BaseButtons that are descentdants at any level of parent node[br]
+## [color=GOLD]UIButton instances are not affected[color]
 @export var attach_to_parent_tree: bool = false
 
 

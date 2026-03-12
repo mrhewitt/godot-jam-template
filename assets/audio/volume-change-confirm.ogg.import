@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://g6mgr7ku4waq"
-path="res://.godot/imported/volume-change-confirm.ogg-4a11a168307988d14884589b6c82ab54.oggvorbisstr"
+path="res://.godot/imported/volume-change-confirm.ogg-08a14a50c6b1cb09fb24059355866b8d.oggvorbisstr"
 
 [deps]
 
-source_file="res://addons/jam_template/assets/audio/volume-change-confirm.ogg"
-dest_files=["res://.godot/imported/volume-change-confirm.ogg-4a11a168307988d14884589b6c82ab54.oggvorbisstr"]
+source_file="res://addons/godot-jam-template/assets/audio/volume-change-confirm.ogg"
+dest_files=["res://.godot/imported/volume-change-confirm.ogg-08a14a50c6b1cb09fb24059355866b8d.oggvorbisstr"]
 
 [params]
 

@@ -1,4 +1,4 @@
-@icon("res://addons/jam_template/assets/icons/icons8-nodes-60.png")
+@icon("res://addons/godot-jam-template/assets/icons/icons8-nodes-60.png")
 class_name GameStateMachine extends Node
 
 ## Emitted when the state of the game has changed

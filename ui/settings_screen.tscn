@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dc1xd170yfvm8"]
 
-[ext_resource type="Script" uid="uid://wj4va0gwvwhh" path="res://addons/jam_template/ui/settings_screen.gd" id="1_vmn6j"]
-[ext_resource type="Script" uid="uid://dbei3rwu18mb3" path="res://addons/jam_template/ui/widgets/volume_slider.gd" id="2_tjr4d"]
-[ext_resource type="Script" uid="uid://ckrlgou2x4ade" path="res://addons/jam_template/ui/widgets/volume_percent_label.gd" id="3_vmn6j"]
+[ext_resource type="Script" uid="uid://wj4va0gwvwhh" path="res://addons/godot-jam-template/ui/settings_screen.gd" id="1_vmn6j"]
+[ext_resource type="Script" uid="uid://dbei3rwu18mb3" path="res://addons/godot-jam-template/ui/widgets/volume_slider.gd" id="2_tjr4d"]
+[ext_resource type="Script" uid="uid://ckrlgou2x4ade" path="res://addons/godot-jam-template/ui/widgets/volume_percent_label.gd" id="3_vmn6j"]
 
 [node name="SettingsScreen" type="Control" unique_id=1684574658]
 process_mode = 3
@@ -72,7 +72,7 @@ text = "Master"
 
 [node name="SFXLabel" type="Label" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/LabelVBoxContainer" unique_id=696684030]
 layout_mode = 2
-text = "SFX"
+text = "Sound"
 
 [node name="MusicLabel" type="Label" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/LabelVBoxContainer" unique_id=708235661]
 layout_mode = 2
@@ -107,6 +107,7 @@ bus = "Music"
 metadata/_custom_type_script = "uid://dbei3rwu18mb3"
 
 [node name="SuffixVBoxContainer" type="VBoxContainer" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1223117410]
+visible = false
 layout_mode = 2
 
 [node name="MasterLabel" type="Label" parent="CanvasLayer/Mask/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/SuffixVBoxContainer" unique_id=1072145154]

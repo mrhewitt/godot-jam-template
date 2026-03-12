@@ -1,3 +1,28 @@
+# ####################################################################################
+# ##                   This file is part of Godot Jam Template.                     ##
+# ##                 https://github.com/mrhewitt/godot-jam-template                 ##
+# ####################################################################################
+# ## Copyright (c) 2026 Mark Hewitt                                                 ##
+# ##                                                                                ##
+# ## Permission is hereby granted, free of charge, to any person obtaining a copy   ##
+# ## of this software and associated documentation files (the "Software"), to deal  ##
+# ## in the Software without restriction, including without limitation the rights   ##
+# ## to use, copy, modify, merge, publish, distribute, sublicense, and/or sell      ##
+# ## copies of the Software, and to permit persons to whom the Software is          ##
+# ## furnished to do so, subject to the following conditions:                       ##
+# ##                                                                                ##
+# ## The above copyright notice and this permission notice shall be included in all ##
+# ## copies or substantial portions of the Software.                                ##
+# ##                                                                                ##
+# ## THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR     ##
+# ## IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,       ##
+# ## FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE    ##
+# ## AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER         ##
+# ## LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  ##
+# ## OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  ##
+# ## SOFTWARE.                                                                      ##
+# ####################################################################################
+
 @tool
 class_name GodotJamTemplatePlugin extends EditorPlugin
 
@@ -8,7 +33,7 @@ const MUSIC_PLAYER = "MusicPlayer"
 const GAME_MANAGER = "Game"
 
 ## Path the the default audio bus to configure for the project
-const AUDIO_BUS_PATH = "res://addons/jam_template/resources/default_bus_layout.tres"
+const AUDIO_BUS_PATH = "res://addons/godot-jam-template/resources/default_bus_layout.tres"
 
 ## Audio resource providing default click sound for buttons
 ## [br] DO NOT USE THIS DIRECTLY
@@ -21,18 +46,22 @@ const SETTINGS_UI_CLOCK_SOUND = "plugin/godot_jam_template/ui_click_sound"
 ## Specials actions automatically setup by the template
 const ACTIONS = {
 		screenshot = {key = {code = KEY_S, ctrl_pressed = true} },
-		pause = { key = {code = KEY_ESCAPE} },
-		skip = { key = {code = KEY_SPACE}, mouse = MOUSE_BUTTON_LEFT }
+		pause = { key = KEY_ESCAPE },
+		skip = { key = KEY_SPACE, mouse = MOUSE_BUTTON_LEFT },
+		move_up = [ {key = KEY_W}, {key = KEY_UP} ],
+		move_down = [ {key = KEY_S}, {key = KEY_DOWN} ],
+		move_left = [ {key = KEY_A}, {key = KEY_LEFT} ],
+		move_right = [ {key = KEY_D}, {key = KEY_RIGHT} ],
 }
 
 
 func _enable_plugin() -> void:
 	# Add autoloads here.
-	add_autoload_singleton(SCREEN_SHOT, "res://addons/jam_template/game/screenshot.gd")
-	add_autoload_singleton(SFX_PLAYER, "res://addons/jam_template/audio/sound_player.gd")
-	add_autoload_singleton(MUSIC_PLAYER, "res://addons/jam_template/audio/music_player.gd")
-	add_autoload_singleton(GAME_MANAGER, "res://addons/jam_template/game/game_base.tscn")
-	
+	add_autoload_singleton(SCREEN_SHOT, "res://addons/godot-jam-template/game/screenshot.gd")
+	add_autoload_singleton(SFX_PLAYER, "res://addons/godot-jam-template/audio/sound_player.gd")
+	add_autoload_singleton(MUSIC_PLAYER, "res://addons/godot-jam-template/audio/music_player.gd")
+	add_autoload_singleton(GAME_MANAGER, "res://addons/godot-jam-template/game/game_base.tscn")
+
 	add_actions( ACTIONS )
 	
 	# these are custom Project Settings value specifically for making template easy to use
@@ -70,7 +99,7 @@ func add_actions( actions: Dictionary ) -> void:
 		add_action( action, actions[action] )
 
 
-func add_action( action: String, event: Dictionary ) -> void:
+func add_action( action: String, event ) -> void:
 	var input_map = {
 		"deadzone": 0.2,
 		"events": []
@@ -81,7 +110,16 @@ func add_action( action: String, event: Dictionary ) -> void:
 #		event_gamepad.button_index = gamepad_button
 #		event_gamepad.device = -1 # All devices
 #		input_map["events"].append(event_gamepad)
+	if typeof(event) == TYPE_DICTIONARY:
+		_add_to_input_map(event,input_map)
+	else:
+		for entry in event:
+			print("Found entry ", entry)
+			_add_to_input_map(entry,input_map)
+	ProjectSettings.set_setting("input/" + action, input_map)
+
 	
+func _add_to_input_map( event, input_map ) -> void:
 	if event.has('mouse'):
 		var event_mouse := InputEventMouseButton.new()
 		event_mouse.button_index = event.mouse
@@ -90,13 +128,14 @@ func add_action( action: String, event: Dictionary ) -> void:
 
 	if event.has('key'):
 		var event_key := InputEventKey.new()
-		event_key.physical_keycode = event.key.code
-		#event_key.mods.ctrl_pressed = event.key.has('çtrl_pressed') and event.key.çtrl_pressed
+		if event.key is Dictionary:
+			event_key.physical_keycode = event.key.code
+			event_key.ctrl_pressed = true # event.key.has('çtrl_pressed') and event.key.çtrl_pressed
+		else:
+			event_key.physical_keycode = event.key
+				
 		input_map["events"].append(event_key)
-		
-	ProjectSettings.set_setting("input/" + action, input_map)
 
-	
 	
 func remove_actions( actions: Array ) -> void:
 	for action in actions:

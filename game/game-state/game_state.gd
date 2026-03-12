@@ -1,4 +1,4 @@
-@icon("res://addons/jam_template/assets/icons/icons8-gears-50.png")
+@icon("res://addons/godot-jam-template/assets/icons/icons8-gears-50.png")
 class_name GameState extends Node
 
 ## Emitted when this state is "complete" and wants to request game
@@ -8,6 +8,10 @@ signal next_state(state_completed: GameState)
 ## Emitted when a state wants to swith to another state
 signal goto_state( state )
 
+## Optional music track to play on entering this state
+## Will play on _enter_state and stop on _exit_state
+@export var state_music: AudioStreamResource = null
+
 var _state_machine: GameStateMachine = null
 
 
@@ -16,11 +20,14 @@ func switch_to() -> void:
 	
 
 func _enter_state() -> void:
-	pass
+	if state_music != null:
+		MusicPlayer.play(state_music)
 	
 	
 func _exit_state() -> void:
-	pass
+	if state_music != null:
+		MusicPlayer.stop()
+
 	
 ## Called when the [State] is added to a [StateMachine].
 ## This should be used for initialization instead of _ready() because it is

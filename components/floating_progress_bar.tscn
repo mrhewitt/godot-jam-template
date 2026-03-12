@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://beervmqmhaiau"]
+
+[ext_resource type="Script" uid="uid://h5m4v8opibfj" path="res://addons/godot-jam-template/components/floating_progress_bar.gd" id="1_ql7wo"]
+
+[node name="FloatingProgressBar" type="ProgressBar" unique_id=1956300729]
+max_value = 1.0
+show_percentage = false
+script = ExtResource("1_ql7wo")

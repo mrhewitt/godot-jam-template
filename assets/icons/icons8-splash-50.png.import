@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqehpq6aqfp0d"
-path="res://.godot/imported/icons8-splash-50.png-5aff047115bdf361f34a262ecb0ca2f3.ctex"
+path="res://.godot/imported/icons8-splash-50.png-9198f2bc6cc013ad83dc2d93aa3c1d59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/jam_template/assets/icons/icons8-splash-50.png"
-dest_files=["res://.godot/imported/icons8-splash-50.png-5aff047115bdf361f34a262ecb0ca2f3.ctex"]
+source_file="res://addons/godot-jam-template/assets/icons/icons8-splash-50.png"
+dest_files=["res://.godot/imported/icons8-splash-50.png-9198f2bc6cc013ad83dc2d93aa3c1d59.ctex"]
 
 [params]
 

@@ -12,11 +12,17 @@ var game_instance: GameScene = null
 func _enter_state() -> void:
 	super()
 	game_instance = game_scene.instantiate()
-	game_instance.goto_return_state.connect( func(): goto_state.emit(return_state) )
+	game_instance.goto_return_state.connect( set_return_state )
 	add_child(game_instance)
 
 
 func _exit_state() -> void:
-	super()
+	await super()
 	game_instance.queue_free()
 	game_instance = null
+	
+	
+func set_return_state() -> void:
+	goto_state.emit(return_state)
+	# do not allow this to be called again accidently while we are transitioning
+	game_instance.goto_return_state.disconnect(set_return_state)

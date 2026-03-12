@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cqjjo3gxxdode"
-path="res://.godot/imported/logo_intro_clip.ogg-70f6c1194a2092898ffc08d437a69eca.oggvorbisstr"
+path="res://.godot/imported/logo_intro_clip.ogg-5fefb408da7cdd2e0ea5ed118ab3fe9e.oggvorbisstr"
 
 [deps]
 
-source_file="res://addons/jam_template/assets/audio/logo_intro_clip.ogg"
-dest_files=["res://.godot/imported/logo_intro_clip.ogg-70f6c1194a2092898ffc08d437a69eca.oggvorbisstr"]
+source_file="res://addons/godot-jam-template/assets/audio/logo_intro_clip.ogg"
+dest_files=["res://.godot/imported/logo_intro_clip.ogg-5fefb408da7cdd2e0ea5ed118ab3fe9e.oggvorbisstr"]
 
 [params]
 

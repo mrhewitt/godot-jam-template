@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b5w3sqfvrrycr"
-path="res://.godot/imported/Mouse_Click-009.ogg-a01cbf853f113538f08e0554779c479c.oggvorbisstr"
+path="res://.godot/imported/Mouse_Click-009.ogg-ded1ec714c43860da68d06eb7bf23ead.oggvorbisstr"
 
 [deps]
 
-source_file="res://addons/jam_template/assets/audio/Mouse_Click-009.ogg"
-dest_files=["res://.godot/imported/Mouse_Click-009.ogg-a01cbf853f113538f08e0554779c479c.oggvorbisstr"]
+source_file="res://addons/godot-jam-template/assets/audio/Mouse_Click-009.ogg"
+dest_files=["res://.godot/imported/Mouse_Click-009.ogg-ded1ec714c43860da68d06eb7bf23ead.oggvorbisstr"]
 
 [params]
 

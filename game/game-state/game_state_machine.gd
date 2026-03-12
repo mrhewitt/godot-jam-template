@@ -24,9 +24,9 @@ func switch_to( state ) -> GameState:
 	if next_state != _current_state:
 		var last_state := _current_state
 		if _current_state:
-			_current_state._exit_state()
+			await _current_state._exit_state()
 		_current_state = find_state(state)
-		_current_state._enter_state()
+		await _current_state._enter_state()
 		state_changed.emit(last_state,_current_state)
 	
 	return _current_state

@@ -12,6 +12,12 @@ signal goto_state( state )
 ## Will play on _enter_state and stop on _exit_state
 @export var state_music: AudioStreamResource = null
 
+## Set a transition to play when this state is entered
+@export var enter_transition: SceneTransitionAbstract = null
+
+## Set a transition to show when exiting the state
+@export var exit_transition: SceneTransitionAbstract = null
+
 var _state_machine: GameStateMachine = null
 
 
@@ -22,9 +28,13 @@ func switch_to() -> void:
 func _enter_state() -> void:
 	if state_music != null:
 		MusicPlayer.play(state_music)
+	if enter_transition != null:
+		await enter_transition.wipe_in(self)
 	
 	
 func _exit_state() -> void:
+	if exit_transition != null:
+		await exit_transition.wipe_out(self)
 	if state_music != null:
 		MusicPlayer.stop()
 

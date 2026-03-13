@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ShaderSceneTransition" format=3 uid="uid://dwr4tkrh2q8pj"]
+
+[ext_resource type="Script" uid="uid://dslsfcctxsft2" path="res://addons/godot-jam-template/game/transitions/shader_scene_transition.gd" id="1_nsnk5"]
+[ext_resource type="Material" uid="uid://01krdvfgp2qq" path="res://addons/godot-jam-template/resources/transitions/default_diamond_transition_material.tres" id="2_ygja8"]
+
+[resource]
+script = ExtResource("1_nsnk5")
+shader_material = ExtResource("2_ygja8")
+progress_property = "progress"
+progress_value_closed = 1.0
+duration = 0.5
+metadata/_custom_type_script = "uid://dslsfcctxsft2"

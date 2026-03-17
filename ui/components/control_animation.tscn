@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dh4ekcxtj085w"]
+
+[ext_resource type="Script" uid="uid://colvjjf53seik" path="res://addons/godot-jam-template/ui/components/control_animation.gd" id="1_gww8d"]
+
+[node name="ControlAnimation" type="Node" unique_id=219885580]
+script = ExtResource("1_gww8d")
+animation = null

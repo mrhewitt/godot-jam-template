@@ -1,6 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://01krdvfgp2qq"]
 
-[ext_resource type="Shader" uid="uid://b7i1epahp7e8h" path="res://addons/godot-shader-library/shaders/diamond_transition.gdshader" id="1_mj20v"]
+[ext_resource type="Shader" uid="uid://b7i1epahp7e8h" path="res://addons/godot-shader-library/shaders/canvas/diamond_transition.gdshader" id="1_mj20v"]
+
 
 [resource]
 shader = ExtResource("1_mj20v")

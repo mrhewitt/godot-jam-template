@@ -1,4 +1,5 @@
-class_name GameScene extends Node2D
+class_name GameScene3D
+extends Node3D
 
 
 ## Emitted when play manager must go to its return state

@@ -20,7 +20,21 @@ const PREFIX: Array[String] = [
 	"Dancing",
 	"Captain",
 	"Ninja",
-	"Grumpy"
+	"Grumpy",
+	"Big",
+	"Loony",
+	"Tiny",
+	"Crazy",
+	"Hopping",
+	"Sleepy",
+	"Lazy",
+	"Flappy",
+	"Bouncy",
+	"Bald",
+	"Skinny",
+	"Chunky",
+	"Hopping",
+	"Mad"
 ]
 
 const SUFFIX: Array[String] = [
@@ -35,7 +49,11 @@ const SUFFIX: Array[String] = [
 	"Turtle",
 	"Chicken",
 	"Wombat",
-	"Goose"
+	"Goose",
+	"Kitty",
+	"Panda",
+	"Dragon",
+	"Zombie"
 ]
 #endregion
 

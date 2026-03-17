@@ -10,7 +10,7 @@ var game_state_machine: GameStateMachine
 
 ## Show/hide the settings overlay and pause/resume game
 ## [br]Set [param game_scene] for a quit button to leave game play state
-func show_settings( game_scene: GameScene = null ) -> void:
+func show_settings( game_scene: Node = null ) -> void:
 	pause() 
 
 	var instance = SETTINGS_SCREEN.instantiate()

@@ -6,7 +6,7 @@ class_name GameStatePlay extends GameState
 ## Game module to instantiate when start enters
 @export var game_scene: PackedScene
 
-var game_instance: GameScene = null 
+var game_instance: Node = null 
 
 
 func _enter_state() -> void:

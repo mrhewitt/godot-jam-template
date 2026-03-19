@@ -38,7 +38,7 @@ const AUDIO_BUS_PATH = "res://addons/godot-jam-template/resources/default_bus_la
 ## Audio resource providing default click sound for buttons
 ## [br] DO NOT USE THIS DIRECTLY
 ## [br] Get default sound resource path from proejct settings using SETTINGS_UI_CLOCK_SOUND const
-const DEFAULT_UI_CLICK_AUDIO = "res://addons/jam_template/resources/ui_click.tres"
+const DEFAULT_UI_CLICK_AUDIO = "res://addons/godot-jam-template/resources/ui_click.tres"
 
 ## Path the Project Settings value for getting the path of default audio resource for button clicks
 const SETTINGS_UI_CLOCK_SOUND = "plugin/godot_jam_template/ui_click_sound"

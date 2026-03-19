@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqv1insr6f2yi"]
 
-[ext_resource type="Script" uid="uid://bnoht28pq6w7w" path="res://addons/jam_template/components/button_feedback.gd" id="1_pv774"]
+[ext_resource type="Script" uid="uid://bnoht28pq6w7w" path="res://addons/godot-jam-template/ui/components/button_feedback.gd" id="1_pv774"]
 
 [node name="ButtonFeedback" type="Node" unique_id=1300952518]
 script = ExtResource("1_pv774")
